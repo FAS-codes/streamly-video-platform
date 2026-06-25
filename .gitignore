@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# env / secrets
+.env
+.env.local
+.env.*.local
+
+# local MongoDB data (created by the dev mongod command)
+data/
+
+# build output
+client/dist/
+
+# uploaded + transcoded media (regenerated at runtime)
+server/storage/uploads/*
+server/storage/media/*
+server/storage/thumbnails/*
+!server/storage/uploads/.gitkeep
+!server/storage/media/.gitkeep
+!server/storage/thumbnails/.gitkeep
+
+# misc
+.DS_Store
+*.log

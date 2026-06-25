@@ -1,0 +1,8 @@
+node_modules/
+dist/
+
+# Do not commit .env: Vite would let a committed .env override the build-time
+# env var set in the Vercel dashboard. Use .env.example for reference.
+.env
+.env.local
+.env.*.local
