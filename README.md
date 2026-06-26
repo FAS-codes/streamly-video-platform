@@ -130,6 +130,17 @@ The repo includes [`render.yaml`](render.yaml), so:
 
 Go back to Render and set `CLIENT_ORIGIN` to the real Vercel URL, then redeploy so CORS allows the frontend.
 
+### 5. Seed demo content
+
+Render's free filesystem is ephemeral, so uploaded videos are wiped on each redeploy/sleep. Repopulate the demo anytime with the bundled seed script (uploads the clips in `server/samples/`):
+
+```bash
+cd server
+API_URL=https://streamly-video-platform.onrender.com npm run seed
+```
+
+Demo login → **demo@streamly.app** / **demo1234**
+
 ## Possible next steps
 
 - Swap the in-process queue for **BullMQ + Redis** and run the worker as its own process
